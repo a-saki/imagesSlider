@@ -19,7 +19,7 @@ $(function(){
 	$nav_img.on('click',function(){
 		var $main_img = $('#main img'),
 		    $main_img_last = $('#main img:last'),
-		    $nav_list = $('ul.contents li');/*変数に入れても入れなくても一緒？*/
+		    $nav_list = $('ul.contents li');
 				
 		$nav_list.removeClass();
 		$(this).parent().addClass('active');		
@@ -39,7 +39,6 @@ $(function(){
 					$next.addClass('show');
 					if(ul_pos == 0){
 						$prev.addClass('hide').removeClass('show');
-						
 					}
 					})
 		}
