@@ -2,12 +2,12 @@ $(function(){
 
 	var $viewport = $('.viewport').width(),
 	    $li_width = $('ul.contents li').outerWidth(true),
-			$li_size = $('ul.contents li').size(),
-			$contents_width = $li_width * $li_size,
-			$prev = $('#prev'),
-			$next = $('#next'),
-			$move_li = 4,
-			$nav_img = $('ul.contents li img');
+	    $li_size = $('ul.contents li').size(),
+	    $contents_width = $li_width * $li_size,
+	    $prev = $('#prev')
+	    $next = $('#next'),
+	    $move_li = 4,
+	    $nav_img = $('ul.contents li img');
 
 			
 	$('ul.contents').css({
@@ -19,16 +19,15 @@ $(function(){
 	$nav_img.on('click',function(){
 		var $main_img = $('#main img'),
 		    $main_img_last = $('#main img:last'),
-				$nav_list = $('ul.contents li');/*変数に入れても入れなくても一緒？*/
+		    $nav_list = $('ul.contents li');/*変数に入れても入れなくても一緒？*/
 				
 		$nav_list.removeClass();
 		$(this).parent().addClass('active');		
 		
 		$main_img.before('<img src="' +  $(this).attr('src') + '" />').fadeOut('fast',function(){
 			$main_img_last.remove();
-			
 		});
-  });	
+	});	
 		
 	$prev.on('click',function(){
 		if($prev.attr('class') != 'hide'){
@@ -42,10 +41,9 @@ $(function(){
 						$prev.addClass('hide').removeClass('show');
 						
 					}
-					
 					})
 		}
-		});
+	});
 		
 
 		
@@ -59,13 +57,12 @@ $(function(){
 					if(ul_pos == -($contents_width-$li_width* $move_li)){
 						$next.addClass('hide').removeClass('show');
 					}
-					
 					});
 		}
-		});
+	});
 		
-		function leftPosition(ele,pos){
-			var position =$(ele).position();
-			return position[pos];
-		}
+	function leftPosition(ele,pos){
+		var position =$(ele).position();
+		return position[pos];
+	}
 });
