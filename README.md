@@ -2,4 +2,4 @@ imagesSlider
 ============
 
 
-[http://practice.ready.jp/imageslider.html](http://practice.ready.jp/imageslider.html)
+[http://a-saki.github.io/imagesSlider/](http://a-saki.github.io/imagesSlider/)
